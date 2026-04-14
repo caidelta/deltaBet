@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 ODDS_API_KEY       = os.getenv("ODDS_API_KEY")
 DISCORD_WEBHOOK    = os.getenv("DISCORD_WEBHOOK_URL")

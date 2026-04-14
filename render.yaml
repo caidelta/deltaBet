@@ -1,0 +1,15 @@
+services:
+  - type: worker          # background service, not web server
+    name: arb-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: ODDS_API_KEY
+        sync: false       # set manually in Render dashboard
+      - key: DISCORD_WEBHOOK_URL
+        sync: false
+      - key: MIN_ARB_PCT
+        value: "0.005"
+      - key: POLL_INTERVAL_MIN
+        value: "30"       # 30 min = ~1440 req/month, safe under 500 free tier
