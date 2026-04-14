@@ -1,0 +1,22 @@
+# Context File
+CLAUDE.md
+
+# Environment
+.env
+
+# Local Database
+arb.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
